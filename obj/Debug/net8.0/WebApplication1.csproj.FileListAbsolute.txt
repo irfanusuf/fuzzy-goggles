@@ -37,3 +37,4 @@
 /home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/SharpCompress.dll
 /home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Snappier.dll
 /home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/ZstdSharp.dll
+/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json
