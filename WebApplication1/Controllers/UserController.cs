@@ -59,6 +59,66 @@ public async Task<IActionResult> Post([FromBody] User user)
     }
 }
 
+[HttpPost("login")]
+public async Task<IActionResult> Login([FromBody] LoginRequest request)
+{
+    try
+    {
+      
+        var user = await _dbContext.Users.Find(u => u.Email == request.Email).FirstOrDefaultAsync();
+
+        if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
+        {
+            return Unauthorized(new
+            {
+                message = "Invalid email or password."
+            });
+        }
+
+      
+        var tokenHandler = new System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler();
+        var key = System.Text.Encoding.ASCII.GetBytes("YourSecretKeyHere"); // Replace with a secure key
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.Username)
+            }),
+            Expires = DateTime.UtcNow.AddHours(1),
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        var tokenString = tokenHandler.WriteToken(token);
+
+        return Ok(new
+        {
+            message = "Login successful!",
+            token = tokenString
+        });
+    }
+    catch (Exception ex)
+    {
+        
+
+        return StatusCode(500, new
+        {
+            message = "An error occurred while processing your request.",
+            error = ex.Message
+        });
+    }
+}
+
+
+public class LoginRequest
+{
+    public string Email { get; set; }
+    public string Password { get; set; }
+}
+
+
+
 
   [HttpGet("getUser/{id}")]
 public async Task<IActionResult> GetUser(string id)
