@@ -14,90 +14,172 @@ namespace WebApplication1.Controllers
         private readonly MongoDbContext _dbContext = dbContext;
 
 
-        [HttpPost("register")]
-        public async Task<IActionResult> Post([FromBody] User user)
+     [HttpPost("register")]
+public async Task<IActionResult> Post([FromBody] User user)
+{
+    try
+    {
+  
+        var existingUser = await _dbContext.Users.Find(u => u.Email == user.Email).FirstOrDefaultAsync();
+        if (existingUser != null)
         {
-
-            await _dbContext.Users.InsertOneAsync(user);
-
-            return Ok(new
+            return BadRequest(new
             {
-                message = "User Created Succesfully!",
-                paylaod = new
-                {
-
-                    id = user.Id.ToString()
-                }
+                message = "A user with this email already exists."
             });
         }
 
-        [HttpGet("getUser/{id}")]
+     
+        user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
 
-        public async Task<IActionResult> GetUser(string id)
+       
+        user.UserDateCreated = DateTime.UtcNow;
+
+     
+        await _dbContext.Users.InsertOneAsync(user);
+
+        return Ok(new
         {
-
-            var user = await _dbContext.Users.Find(user => user.Id.ToString() == id).FirstOrDefaultAsync();
-
-            if (user == null)
+            message = "User created successfully!",
+            payload = new
             {
-                return NotFound(new { Message = "User not found" });
+                id = user.Id.ToString()
             }
+        });
+    }
+    catch (Exception ex)
+    {
+       
 
-
-            return Ok(new
-            {
-                message = "user Found ",
-                payload = new
-                {
-                    id = user.Id.ToString(),
-                    username = user.Username
-                }
-
-
-            });
-        }
-
-        [HttpDelete("delete/{id}")]
-
-        public async Task<IActionResult> DeleteUser(string id)
+        return StatusCode(500, new
         {
-            var delete = await _dbContext.Users.DeleteOneAsync(user => user.Id.ToString() == id);
-            if (delete.DeletedCount == 0)
+            message = "Sever Error ",
+            error = ex.Message
+        });
+    }
+}
+
+
+  [HttpGet("getUser/{id}")]
+public async Task<IActionResult> GetUser(string id)
+{
+    try
+    {
+        var user = await _dbContext.Users.Find(u => u.Id.ToString() == id).FirstOrDefaultAsync();
+
+        if (user == null)
+        {
+            return NotFound(new
             {
-                return BadRequest(new
-                {
-                    message = "User not Found may be already deleted",
-                });
-            }
-            return Ok(new
-            {
-                Message = "Deleted sucessfully",
-                payload = new
-                {
-                    deleteCount = delete.DeletedCount
-                }
+                message = "User not found"
             });
         }
 
-        [HttpPut("edit/{id}")]
-        public async Task <IActionResult> EditUser (string id ,[FromBody] User user) {
-
-            var findUser  = await _dbContext.Users.Find(user =>user.Id.ToString() == id).FirstOrDefaultAsync();
-
-            if(findUser == null){
-                return NotFound();
+        return Ok(new
+        {
+            message = "User found successfully!",
+            payload = new
+            {
+                id = user.Id.ToString(),
+                username = user.Username
             }
+        });
+    }
+    catch (Exception ex)
+    {
+        
 
-            findUser.Email = user.Email ?? findUser.Email;
-            findUser.Username = user.Username ?? findUser.Username; 
-            findUser.Phone = user.Phone ?? findUser.Phone;
+        return StatusCode(500, new
+        {
+            message = "An error occurred while processing your request.",
+            error = ex.Message
+        });
+    }
+}
 
 
-            await  _dbContext.Users.ReplaceOneAsync(user => user.Id.ToString() == id , findUser);
-            return Ok (new {
-                message = "edited Succesfully!"
+
+
+
+[HttpDelete("delete/{id}")]
+public async Task<IActionResult> DeleteUser(string id)
+{
+    try
+    {
+      
+        var delete = await _dbContext.Users.DeleteOneAsync(user => user.Id.ToString() == id);
+
+        if (delete.DeletedCount == 0)
+        {
+            return BadRequest(new
+            {
+                message = "User not found or may have already been deleted."
             });
         }
+
+        return Ok(new
+        {
+            message = "User deleted successfully!",
+            payload = new
+            {
+                deleteCount = delete.DeletedCount
+            }
+        });
+    }
+    catch (Exception ex)
+    {
+      
+
+        return StatusCode(500, new
+        {
+            message = "Server Error!",
+            error = ex.Message
+        });
+    }
+}
+
+
+  [HttpPut("edit/{id}")]
+public async Task<IActionResult> EditUser(string id, [FromBody] User user)
+{
+    try
+    {
+      
+        var findUser = await _dbContext.Users.Find(u => u.Id.ToString() == id).FirstOrDefaultAsync();
+
+        if (findUser == null)
+        {
+            return NotFound(new
+            {
+                message = "User not found."
+            });
+        }
+
+    
+        findUser.Email = user.Email ?? findUser.Email;
+        findUser.Username = user.Username ?? findUser.Username;
+        findUser.Phone = user.Phone ?? findUser.Phone;
+
+    
+        await _dbContext.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
+
+        return Ok(new
+        {
+            message = "User edited successfully!"
+        });
+    }
+    catch (Exception ex)
+    {
+     
+
+        return StatusCode(500, new
+        {
+            message = "Server Error | 500",
+            error = ex.Message
+        });
+    }
+}
+
 
     }
 }
