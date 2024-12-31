@@ -15,6 +15,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<MongoDbContext>();
 builder.Services.AddScoped<ProductService>();
+builder.Services.AddSingleton<ITokenService, TokenService>();
+
 
 builder.Services.AddControllers();
 
