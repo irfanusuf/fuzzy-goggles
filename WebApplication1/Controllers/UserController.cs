@@ -118,6 +118,35 @@ public class LoginRequest
 }
 
 
+[HttpPost("login")]
+public async Task<IActionResult> Login([FromBody] LoginRequest request, [FromServices] ITokenService tokenService)
+{
+    try
+    {
+        var user = await _dbContext.Users.Find(u => u.Email == request.Email).FirstOrDefaultAsync();
+
+        if (user == null || !BCrypt.Net.BCrypt.Verify(request.Password, user.Password))
+        {
+            return Unauthorized(new { message = "Invalid email or password." });
+        }
+
+        var token = tokenService.CreateToken(user.Id.ToString(), user.Email, user.Username);
+
+        return Ok(new
+        {
+            message = "Login successful!",
+            token
+        });
+    }
+    catch (Exception ex)
+    {
+        return StatusCode(500, new
+        {
+            message = "An error occurred while processing your request.",
+            error = ex.Message
+        });
+    }
+}
 
 
   [HttpGet("getUser/{id}")]
