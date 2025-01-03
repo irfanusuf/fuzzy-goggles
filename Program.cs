@@ -9,6 +9,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 
+builder.Services.AddCors(Options =>
+{
+    Options.AddPolicy("AllowAll", policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
+
+});
+
+
 
 // dependency injection 
 builder.Services.AddSingleton<MongoDbService>();
@@ -29,7 +37,7 @@ if (app.Environment.IsDevelopment())
 
 
 app.UseHttpsRedirection();
-
+app.UseCors("AllowAll");
 app.MapControllers();
 
 

@@ -7,7 +7,7 @@ using WebApplication1.Interfaces;
 
 public class TokenService : ITokenService   // inheritance 
 {
-    private readonly string _secretKey;    // 
+    private readonly string _secretKey;     // 
 
     public TokenService(IConfiguration configuration)
     {
@@ -16,8 +16,10 @@ public class TokenService : ITokenService   // inheritance
 
     public string CreateToken(string userId, string email, string username)
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
-        var key = Encoding.ASCII.GetBytes(_secretKey);
+        var tokenHandler = new JwtSecurityTokenHandler();   // intializing new instance of  JwtSecurityTokenHandler
+
+        var key = Encoding.ASCII.GetBytes(_secretKey);  
+
         var tokenDescriptor = new SecurityTokenDescriptor      // sign contract 
         {
             Subject = new ClaimsIdentity(
@@ -27,9 +29,11 @@ public class TokenService : ITokenService   // inheritance
                 new Claim(ClaimTypes.Name, username)
             ]),
             Expires = DateTime.UtcNow.AddHours(1),
+
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
-        var token = tokenHandler.CreateToken(tokenDescriptor);    
+        var token = tokenHandler.CreateToken(tokenDescriptor);   
+         
         return tokenHandler.WriteToken(token);
     }
 }
