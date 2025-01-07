@@ -5,18 +5,20 @@ using WebApplication1.Services;
 using MongoDB.Driver;
 using System.Security.Claims;
 using WebApplication1.Interfaces;
+using CloudinaryDotNet.Actions;
+using CloudinaryDotNet;
+using System.IO;
+using System.Net;
 
 namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController(MongoDbService dbService) : ControllerBase    // inheritance with controller base 
+    public class UserController(MongoDbService dbService, Cloudinary cloudinary) : ControllerBase    // inheritance with controller base 
     {
 
-
-        private readonly MongoDbService _dbservice = dbService;
-
-
+         private readonly MongoDbService _dbservice = dbService;
+         private readonly Cloudinary _cloudinary = cloudinary;
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
@@ -194,8 +196,62 @@ namespace WebApplication1.Controllers
                 });
             }
         }
+
+
+
+        [HttpPost("/upload/profile/{id}")]
+        public async Task<IActionResult> Upload(string id, IFormFile file)
+        {
+            try
+            {
+               
+                var findUser = await _dbservice.Users.Find(u => u.Id.ToString() == id).FirstOrDefaultAsync();
+                if (findUser == null)
+                {
+                    return NotFound(new { message = "User not found." });
+                }
+
+
+                if (file == null || file.Length == 0)
+                {
+                    return BadRequest(new { message = "Invalid file uploaded." });
+                }
+
+                using (var stream = file.OpenReadStream())
+
+                {
+                    var uploadParams = new ImageUploadParams
+                    {
+                        File = new FileDescription(file.FileName, stream),
+                        UseFilename = true,
+                        UniqueFilename = false,
+                        Overwrite = true
+                    };
+
+                    var uploadResult = _cloudinary.Upload(uploadParams);
+
+                    if (uploadResult.StatusCode != HttpStatusCode.OK)
+                    {
+                        return StatusCode((int)uploadResult.StatusCode, new { message = "Failed to upload the file." });
+                    }
+
+                    findUser.ProfilePictureUrl = uploadResult.SecureUrl.ToString();
+
+
+                    await _dbservice.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
+
+                    return Ok(new
+                    {
+                        message = "File uploaded successfully.",
+                        imageUrl = uploadResult.SecureUrl
+                    });
+                }
+            }
+            catch (Exception error)
+            {
+                return StatusCode(500, new { message = $"Server Error: {error.Message}" });
+            }
+        }
     }
-
-
 
 }
