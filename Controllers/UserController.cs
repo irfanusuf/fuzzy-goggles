@@ -3,12 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
 using WebApplication1.Services;
 using MongoDB.Driver;
-using System.Security.Claims;
 using WebApplication1.Interfaces;
-using CloudinaryDotNet.Actions;
-using CloudinaryDotNet;
-using System.IO;
-using System.Net;
+
 
 namespace WebApplication1.Controllers
 {
@@ -17,8 +13,8 @@ namespace WebApplication1.Controllers
     public class UserController(MongoDbService dbService, ICloudinaryService cloudinary) : ControllerBase    // inheritance with controller base 
     {
 
-         private readonly MongoDbService _dbservice = dbService;
-         private readonly ICloudinaryService _cloudinary = cloudinary;
+        private readonly MongoDbService _dbservice = dbService;
+        private readonly ICloudinaryService _cloudinary = cloudinary;
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
@@ -204,7 +200,7 @@ namespace WebApplication1.Controllers
         {
             try
             {
-               
+
                 var findUser = await _dbservice.Users.Find(u => u.Id.ToString() == id).FirstOrDefaultAsync();
                 if (findUser == null)
                 {
@@ -217,25 +213,41 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { message = "Invalid file uploaded." });
                 }
 
-                    var uploadURL =  _cloudinary.UploadImageAsync(file);
+                var uploadURL = _cloudinary.UploadImageAsync(file);
 
-                    findUser.ProfilePictureUrl = uploadURL.Result.ToString();
+                findUser.ProfilePictureUrl = uploadURL.Result.ToString();
 
 
-                    await _dbservice.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
+                await _dbservice.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
 
-                    return Ok(new
-                    {
-                        message = "File uploaded successfully.",
-                        imageUrl = uploadURL.Result.ToString()
-                    });
+                return Ok(new
+                {
+                    message = "File uploaded successfully.",
+                    imageUrl = uploadURL.Result.ToString()
+                });
             }
-            
+
             catch (Exception error)
             {
                 return StatusCode(500, new { message = $"Server Error: {error.Message}" });
             }
         }
-    }
 
+
+        [HttpPost("/sendmail")]
+
+        public async Task<IActionResult> SendMail(string email)
+        {
+
+            var emailService = new EmailService();
+            await emailService.SendEmailAsync(
+                "recipient@example.com",
+                "Test Email",
+                "<h1>Hello World!</h1><p>This is a test email.</p>",
+                true
+            );
+                return Ok();
+        }
+
+    }
 }
