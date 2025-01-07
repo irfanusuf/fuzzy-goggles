@@ -134,3 +134,4 @@
 /home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.pdb
 /home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
 /home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.sourcelink.json
