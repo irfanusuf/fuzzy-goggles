@@ -14,11 +14,11 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController(MongoDbService dbService, Cloudinary cloudinary) : ControllerBase    // inheritance with controller base 
+    public class UserController(MongoDbService dbService, ICloudinaryService cloudinary) : ControllerBase    // inheritance with controller base 
     {
 
          private readonly MongoDbService _dbservice = dbService;
-         private readonly Cloudinary _cloudinary = cloudinary;
+         private readonly ICloudinaryService _cloudinary = cloudinary;
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
@@ -217,25 +217,9 @@ namespace WebApplication1.Controllers
                     return BadRequest(new { message = "Invalid file uploaded." });
                 }
 
-                using (var stream = file.OpenReadStream())
+                    var uploadURL =  _cloudinary.UploadImageAsync(file);
 
-                {
-                    var uploadParams = new ImageUploadParams
-                    {
-                        File = new FileDescription(file.FileName, stream),
-                        UseFilename = true,
-                        UniqueFilename = false,
-                        Overwrite = true
-                    };
-
-                    var uploadResult = _cloudinary.Upload(uploadParams);
-
-                    if (uploadResult.StatusCode != HttpStatusCode.OK)
-                    {
-                        return StatusCode((int)uploadResult.StatusCode, new { message = "Failed to upload the file." });
-                    }
-
-                    findUser.ProfilePictureUrl = uploadResult.SecureUrl.ToString();
+                    findUser.ProfilePictureUrl = uploadURL.Result.ToString();
 
 
                     await _dbservice.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
@@ -243,10 +227,10 @@ namespace WebApplication1.Controllers
                     return Ok(new
                     {
                         message = "File uploaded successfully.",
-                        imageUrl = uploadResult.SecureUrl
+                        imageUrl = uploadURL.Result.ToString()
                     });
-                }
             }
+            
             catch (Exception error)
             {
                 return StatusCode(500, new { message = $"Server Error: {error.Message}" });
