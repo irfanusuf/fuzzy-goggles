@@ -19,7 +19,10 @@ catch (Exception ex)
 
 
 // connect with Cloudinary and register it
+
 var cloudinaryUrl = Environment.GetEnvironmentVariable("CLOUDINARY_URL");
+
+
 if (string.IsNullOrEmpty(cloudinaryUrl))
 {
     throw new InvalidOperationException("CLOUDINARY_URL environment variable is not set.");
@@ -44,6 +47,7 @@ builder.Services.AddCors(Options =>
 // dependency injection 
 builder.Services.AddSingleton<MongoDbService>();
 builder.Services.AddSingleton<ITokenService, TokenService>();
+builder.Services.AddSingleton<ICloudinaryService, CloudinaryService>();
 builder.Services.AddSingleton(cloudinary);
 
 

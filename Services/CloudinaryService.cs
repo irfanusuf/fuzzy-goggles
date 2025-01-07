@@ -2,14 +2,8 @@ using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using WebApplication1.Interfaces;
 
-public class CloudinaryService : ICloudinaryService
+public class CloudinaryService (Cloudinary cloudinary): ICloudinaryService
 {
-    private readonly Cloudinary _cloudinary;
-
-    public CloudinaryService(Cloudinary cloudinary)
-    {
-        _cloudinary = cloudinary;
-    }
 
     public async Task<string> UploadImageAsync(IFormFile file)
     {
@@ -21,11 +15,14 @@ public class CloudinaryService : ICloudinaryService
         var uploadParams = new ImageUploadParams
         {
             File = new FileDescription(file.FileName, stream),
-            Transformation = new Transformation().Width(150).Height(150).Crop("fill")
+            UseFilename = true,
+            UniqueFilename = false,
+            Overwrite = true
+            // Transformation = new Transformation().Width(150).Height(150).Crop("fill")
         };
 
-        var uploadResult = await _cloudinary.UploadAsync(uploadParams);
+        var uploadResult = await cloudinary.UploadAsync(uploadParams);
 
-        return uploadResult.Url.ToString();
+        return uploadResult.SecureUrl.ToString();
     }
 }

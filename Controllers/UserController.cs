@@ -211,6 +211,7 @@ namespace WebApplication1.Controllers
                     return NotFound(new { message = "User not found." });
                 }
 
+
                 if (file == null || file.Length == 0)
                 {
                     return BadRequest(new { message = "Invalid file uploaded." });
@@ -235,6 +236,8 @@ namespace WebApplication1.Controllers
                     }
 
                     findUser.ProfilePictureUrl = uploadResult.SecureUrl.ToString();
+
+
                     await _dbservice.Users.ReplaceOneAsync(u => u.Id.ToString() == id, findUser);
 
                     return Ok(new
