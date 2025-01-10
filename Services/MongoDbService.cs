@@ -27,6 +27,7 @@ public class MongoDbService
 
     public IMongoCollection<Product> Products => _database.GetCollection<Product>("Products");
     public IMongoCollection<User> Users => _database.GetCollection<User>("Users");
+    public IMongoCollection<OtpModel> Otps => _database.GetCollection<OtpModel>("OTPs");
 
 
 

@@ -1,0 +1,71 @@
+# Ignore Visual Studio temporary files, build results, and
+# user-specific files
+.vscode/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files by Visual Studio
+Generated\
+
+# Build folders
+bin/
+obj/
+out/
+
+# ASP.NET Temporary files
+artifacts/
+wwwroot/lib/
+
+# Packages
+*.nupkg
+*.snupkg
+packages/
+!packages/*.config
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# Rider
+.idea/
+*.sln.iml
+
+# Other directories and files
+project.lock.json
+project.fragment.lock.json
+*.localhistory/
+**/*.userprefs
+*.sln.ide/
+*.cache/
+*.crunch/
+
+# Docker files
+.dockerignore
+docker-compose.override.yml
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# macOS files
+.DS_Store
+._*
+
+# IDEs
+*.log
+*.orig
+
+# Logs and Debug
+*.log
+*.vspscc
+*.vssscc
+
+# Miscellaneous
+*.tlog
+*.lastcodeanalysissucceeded
+*.lastbuildstate
+*.browser
+.vsconfig

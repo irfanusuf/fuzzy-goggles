@@ -1,40 +1,186 @@
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/appsettings.Development.json
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/appsettings.json
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/WebApplication1
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/WebApplication1.deps.json
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/WebApplication1.runtimeconfig.json
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/WebApplication1.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Microsoft.OpenApi.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cache
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets.build.json
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets.development.json
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/staticwebassets.pack.json
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/scopedcss/bundle/WebApplication1.styles.css
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CopyComplete
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.dll
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/refint/WebApplication1.dll
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/DnsClient.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/MongoDB.Bson.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/MongoDB.Driver.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/SharpCompress.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/Snappier.dll
-/home/irfan_usuf/webapi/WebApplication1/bin/Debug/net8.0/ZstdSharp.dll
-/home/irfan_usuf/webapi/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/appsettings.Development.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/appsettings.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/WebApplication1
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/WebApplication1.deps.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/WebApplication1.runtimeconfig.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets.build.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets.development.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/staticwebassets.pack.json
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/scopedcss/bundle/WebApplication1.styles.css
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CopyComplete
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/refint/WebApplication1.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/DnsClient.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/SharpCompress.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/Snappier.dll
+/home/irfan_usuf/WebApi models&controllers/WebApplication1/bin/Debug/net8.0/ZstdSharp.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/appsettings.Development.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/appsettings.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/WebApplication1
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/WebApplication1.deps.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/WebApplication1.runtimeconfig.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/DnsClient.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/SharpCompress.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Snappier.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/ZstdSharp.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets.build.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets.development.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/staticwebassets.pack.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/scopedcss/bundle/WebApplication1.styles.css
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.csproj.CopyComplete
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/refint/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/BCrypt.Net.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/obj/Debug/net8.0/WebApplication1.sourcelink.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/CloudinaryDotNet.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/dotenv.net.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/WebApplication1/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/appsettings.Development.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/appsettings.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/WebApplication1
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/WebApplication1.deps.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/WebApplication1.runtimeconfig.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/WebApplication1.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/WebApplication1.pdb
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/BCrypt.Net.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/CloudinaryDotNet.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/DnsClient.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/dotenv.net.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/SharpCompress.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Snappier.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/bin/Debug/net8.0/ZstdSharp.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets.build.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets.development.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/staticwebassets.pack.json
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/scopedcss/bundle/WebApplication1.styles.css
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.csproj.CopyComplete
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/refint/WebApplication1.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.pdb
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/irfanusuf/Downloads/fuzzy-goggles-cloudinary2/obj/Debug/net8.0/WebApplication1.sourcelink.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/appsettings.Development.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/WebApplication1
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/WebApplication1.deps.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/WebApplication1.runtimeconfig.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/BCrypt.Net.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/CloudinaryDotNet.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/DnsClient.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/dotenv.net.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Microsoft.OpenApi.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/MongoDB.Bson.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/MongoDB.Driver.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/SharpCompress.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Snappier.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/ZstdSharp.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.csproj.AssemblyReference.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.GeneratedMSBuildEditorConfig.editorconfig
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.AssemblyInfoInputs.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.AssemblyInfo.cs
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.csproj.CoreCompileInputs.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cs
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.MvcApplicationPartsAssemblyInfo.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets.build.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets.development.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets/msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets/msbuild.build.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.WebApplication1.props
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/staticwebassets.pack.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/scopedcss/bundle/WebApplication1.styles.css
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.csproj.CopyComplete
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/refint/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.pdb
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/irfan_usuf/coding /Fuzzy Gogggles/bin/Debug/net8.0/appsettings.json
+/home/irfan_usuf/coding /Fuzzy Gogggles/obj/Debug/net8.0/WebApplication1.sourcelink.json
