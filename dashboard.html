@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Fuzzy Goggles</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container my-5">
+      <form>
+        <h1 class="my-5">Upload your profile pic</h1>
+
+        <!-- <img
+          src=""
+          id="profile-image"
+          alt="profile- image"
+          class="img-thumbnail"
+          width="200"
+        /> -->
+
+        <div id="target-div">
+            
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Uplaod Profile</label>
+
+          <input type="file" class="form-control" id="profile" />
+
+          <div class="form-text">
+            Here u can upload profile pic to your account.
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="upload">Upload</button>
+      </form>
+    </div>
+
+    <script>
+      const baseUrl = "http://localhost:5157/api/User";
+
+      let file;
+
+      document.getElementById("profile").addEventListener("change", (e) => {
+        file = e.target.files[0];
+        const target = document.getElementById("target-div");
+        const createImageTag = document.createElement("img");
+        createImageTag.classList.add("img-thumbnail");
+        createImageTag.style.width = "200px";
+        target.append(createImageTag);
+
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+
+        reader.onload = () => {
+          if (reader.readyState === 2) {
+           
+            createImageTag.src = reader.result; 
+          }
+        };
+      });
+
+      document.getElementById("upload").addEventListener("click", async (e) => {
+        e.preventDefault();
+
+        const userId = localStorage.getItem("userId");
+
+        // const formData = {file}
+
+        const formData = new FormData();
+
+        formData.append("file", file);
+
+        const res = await fetch(`${baseUrl}/Upload/profile/${userId}`, {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await res.json();
+
+        console.log(data);
+      });
+    </script>
+  </body>
+</html>
