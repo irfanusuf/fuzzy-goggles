@@ -13,12 +13,12 @@ namespace WebApplication1.Controllers
     [ApiController]
 
 
-    public class UserController(MongoDbService dbService, ICloudinaryService cloudinary) : ControllerBase    // inheritance with controller base 
+    public class UserController(MongoDbService dbService, ICloudinaryService cloudinary , IMailService mailService) : ControllerBase    // inheritance with controller base 
     {
 
         private readonly MongoDbService _dbservice = dbService;
         private readonly ICloudinaryService _cloudinary = cloudinary;
-        // private readonly IMailService _mailService = mailService;
+        private readonly IMailService _mailService = mailService;
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
@@ -41,7 +41,7 @@ namespace WebApplication1.Controllers
 
 
                 await _dbservice.Users.InsertOneAsync(user);
-                // await _mailService.SendEmailAsync(user.Email, "Welcome Email", "Welcome to our Website Stay tuned for upcoming offers", false);
+                await _mailService.SendEmailAsync(user.Email, "Welcome Email", "Welcome to our Website Stay tuned for upcoming offers", false);
 
                 return Ok(new
                 {
@@ -138,14 +138,9 @@ namespace WebApplication1.Controllers
 
                  var otp = "3456";     // automaticall generate 
                                       // save that otp on datanase
-                // var OtpObj = new OtpModel{
-                //     ObjectId.GenerateNewId()
-                //     otp = otp
-
-                // }
-                     
-                // await _dbservice.Otps.InsertOneAsync(otp);   // check this errror
-                // await _mailService.SendEmailAsync(request.UserEmail, "OTP", otp, false);
+              
+               // await _dbservice.Otps.InsertOneAsync(otp);   // check this errror
+                 await _mailService.SendEmailAsync(request.UserEmail, "OTP", otp, false);
 
                 return Ok(new
                 {
@@ -163,8 +158,6 @@ namespace WebApplication1.Controllers
                 });
             }
         }
-
-
 
         [HttpPost("otp/verify/{userId}/{otpId}")]
         public async Task<IActionResult> Verify(string userId, string otpId , [FromBody] OTP request)
